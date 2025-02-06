@@ -1,0 +1,62 @@
+🔑 SHA, SSH e Token no Git e GitHub
+✅ SHA (Secure Hash Algorithm)
+O SHA é um algoritmo de hash usado pelo Git para identificar commits de forma única. Cada commit recebe um código SHA (uma sequência hexadecimal), garantindo integridade e rastreabilidade do histórico.
+
+🔹 Exemplo de SHA de um commit:
+a1b2c3d4e5f67890abcdef1234567890abcdef12
+
+---------------------------------------------------
+
+🔐 Chave SSH (Secure Shell)
+A chave SSH é usada para autenticar sua máquina ao GitHub de forma segura, sem precisar de senha sempre que fizer um git push ou git pull.
+
+📌 Como gerar uma chave SSH e conectar ao GitHub:
+
+
+Passo 1:
+Gerar uma nova chave SSH:
+ssh-keygen -t ed25519 -C "seu@email.com"
+
+Passo 2:
+Copiar a chave pública:
+cat ~/.ssh/id_ed25519.pub
+
+Passo 3:
+Adicionar a chave no GitHub:
+Vá em Settings > SSH and GPG keys no GitHub.
+Clique em New SSH Key e cole a chave pública.
+
+🔹 Para testar a conexão:
+
+ssh -T git@github.com
+
+---------------------------------------------------
+
+🔑 Token de Acesso Pessoal (PAT - Personal Access Token)
+O Token de Acesso Pessoal substitui senhas ao autenticar via HTTPS no GitHub. Ele é necessário porque o GitHub desativou a autenticação por senha em operações Git.
+
+📌 Como gerar um token no GitHub:
+
+Vá em Settings > Developer settings > Personal Access Tokens.
+Clique em Generate new token.
+Escolha as permissões necessárias (exemplo: repo para acessar repositórios privados).
+Copie o token gerado e use ao clonar ou fazer git push.
+
+🔹 Autenticando via Token:
+Ao clonar um repositório via HTTPS:
+git clone https://github.com/seu-usuario/meu-repo.git
+
+- O GitHub pedirá um usuário (seu login) e a senha será o Token de Acesso Pessoal.
+
+---------------------------------------------------
+
+🚀 Resumo Final
+
+SHA: Identifica commits de forma única.
+Chave SSH: Autentica sua máquina ao GitHub sem senha.
+Token: Substitui a senha em operações HTTPS.
+Ambas as formas de autenticação (SSH e Token) são seguras e evitam o uso de senhas comuns. Qualquer dúvida, só perguntar! 😊
+
+
+
+

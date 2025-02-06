@@ -1,0 +1,84 @@
+🚀 1. O que é Git?
+Git é um sistema de controle de versão distribuído que permite rastrear mudanças no código-fonte durante o desenvolvimento. Ele ajuda a gerenciar diferentes versões de um projeto e facilita o trabalho em equipe.
+
+Principais características do Git:
+
+Distribuído: cada desenvolvedor tem uma cópia completa do repositório.
+Rápido e eficiente: permite mudanças locais antes de enviá-las para o repositório remoto.
+Seguro: protege contra perda de código e mantém um histórico detalhado.
+
+----------------------------------------------------------------------------------------
+
+🌍 2. O que é GitHub?
+GitHub é uma plataforma online para armazenar e compartilhar repositórios Git. Ele facilita a colaboração entre desenvolvedores e oferece recursos como:
+
+Repositórios públicos e privados.
+Pull Requests e Code Review.
+Integração com CI/CD e ferramentas de automação.
+Alternativas ao GitHub:
+
+GitLab (focado em DevOps).
+Bitbucket (integrado ao Jira).
+SourceForge (popular em projetos open-source).
+
+----------------------------------------------------------------------------------------
+
+3. Instalando o Git
+Para começar, você precisa instalar o Git no seu sistema:
+
+Windows: https://git-scm.com/download/win
+Linux: sudo apt install git (Debian) ou sudo yum install git (Fedora)
+MacOS: brew install git
+
+----------------------------------------------------------------------------------------
+
+
+Configuração inicial:
+
+git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"
+
+----------------------------------------------------------------------------------------
+
+Criando um novo repositório:
+
+mkdir meu-projeto
+cd meu-projeto
+git init  # Inicializa um repositório Git na pasta
+
+----------------------------------------------------------------------------------------
+
+📌 Adicionando arquivos ao controle de versão:
+
+echo "Meu primeiro projeto Git" > README.md
+git add README.md
+git commit -m "Adicionando README ao projeto"
+
+## git add → Adiciona arquivos à "staging area".
+## git commit -m → Salva as mudanças no histórico do repositório.
+
+----------------------------------------------------------------------------------------
+
+📌 Criando um repositório no GitHub:
+Vá para https://github.com.
+Clique em "New repository".
+Nomeie o repositório e clique em "Create repository".
+
+-- em seguida Conectando o repositório local ao GitHub:
+
+git remote add origin https://github.com/seu-usuario/meu-projeto.git
+git branch -M main
+git push -u origin main
+
+
+
+
+
+
+
+
+
+
+
+
+
